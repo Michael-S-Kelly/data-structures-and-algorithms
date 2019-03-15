@@ -1,0 +1,11 @@
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\obj\Debug\netcoreapp2.2\00Chall.csprojAssemblyReference.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\obj\Debug\netcoreapp2.2\00Chall.csproj.CoreCompileInputs.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\obj\Debug\netcoreapp2.2\00Chall.AssemblyInfoInputs.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\obj\Debug\netcoreapp2.2\00Chall.AssemblyInfo.cs
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\bin\Debug\netcoreapp2.2\00Chall.deps.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\bin\Debug\netcoreapp2.2\00Chall.runtimeconfig.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\bin\Debug\netcoreapp2.2\00Chall.runtimeconfig.dev.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\bin\Debug\netcoreapp2.2\00Chall.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\bin\Debug\netcoreapp2.2\00Chall.pdb
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\obj\Debug\netcoreapp2.2\00Chall.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\code-challenges\401\00Chall\00Chall\obj\Debug\netcoreapp2.2\00Chall.pdb
