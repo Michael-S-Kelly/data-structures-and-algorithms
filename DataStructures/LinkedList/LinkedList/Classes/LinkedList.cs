@@ -17,7 +17,7 @@ namespace LinkedList.Classes
         /// </summary>
         public Node Current { get; set; }
         #endregion
-
+        
         #region Single Linked List
         /// <summary>
         /// Required at the creation of a Linked List.  Adds a node assigned to Head.
@@ -29,7 +29,7 @@ namespace LinkedList.Classes
             Current = node;
         }
         #endregion
-
+        
         #region Insert a Node at Begining (new Head)
         /// <summary>
         /// This method inserts a node into the Linked List
@@ -38,6 +38,7 @@ namespace LinkedList.Classes
         /// <returns></returns>
         public void Insert(Node node)
         {
+            //Node node = new Node(data);
             Current = Head;
             node.Next = Head;
             Head = node;
@@ -67,16 +68,16 @@ namespace LinkedList.Classes
         /// Appends a new node to the end of the Linked List
         /// </summary>
         /// <param name="newNode">the node to be added</param>
-        public void Append(Node newNode)
+        public void Append(Node node)
         {
             Current = Head;
+
             while (Current.Next != null)
             {
                 Current = Current.Next;
             }
 
-            Current.Next = newNode;
-            Current = Head;
+            Current.Next = node;
         }
         #endregion
 
@@ -137,12 +138,21 @@ namespace LinkedList.Classes
         /// <returns>Returns true if it is in the linked list; returns false if it isn't</returns>
         public bool Includes(int data)
         {
+            Current = Head;
+
+            if (Current.Data == data)
+            {
+                return true;
+            }
+
             while (Current.Next != null)
             {
-                if (data == Current.Data)
+                if (Current.Data == data)
                 {
                     return true;
-                }  
+                }
+
+                Current = Current.Next;
             }
             return false;
         }
