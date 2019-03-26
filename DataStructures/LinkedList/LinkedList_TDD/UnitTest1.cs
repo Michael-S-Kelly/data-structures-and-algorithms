@@ -6,26 +6,44 @@ namespace LinkedList_TDD
 {
     public class UnitTest1
     {
+        /*
         [Fact]
-        public void TestAddTwo()
+        public void TestSeven()
         {
             //Arrange
-            SLinkedList list = new SLinkedList();
+            Node node1 = new Node(7);
+            SLinkedList list = new SLinkedList(node1);
             //Act
-            int check = list.Insert(2);
+            bool check = list.Includes(7);
             //Assert
-            Assert.Equal(2, check);
+            Assert.True(check);
         }
+        */
+
+        /*
+        [Fact]
+        public void TestTwo()
+        {
+            //Arrange
+            Node node1 = new Node(7);
+            Node node2 = new Node(2);
+            SLinkedList list = new SLinkedList(node1);
+            list.Append(node2);
+            //Act
+            bool check = list.Includes(2);
+            //Assert
+            Assert.True(check);
+        }
+        */
+        /*
 
         [Fact]
-        public void TestAddFour()
+        public void Can InsertAfterInMiddle()
         {
-            //Arrange
-            SLinkedList list = new SLinkedList();
-            //Act
-            int check = list.Insert(4);
-            //Assert
-            Assert.Equal(4, check);
+            int value = 0;
+            SLinkedList<int> list = new SLinkedList<int>();
+            list.Insert
         }
+        */
     }
 }

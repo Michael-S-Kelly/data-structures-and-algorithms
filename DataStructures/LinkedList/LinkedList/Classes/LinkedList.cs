@@ -6,24 +6,130 @@ namespace LinkedList.Classes
 {
     public class SLinkedList
     {
-        private Node head;
+        #region Getters and Setters
+        /// <summary>
+        /// Assigns Head to the first node
+        /// </summary>
+        public Node Head { get; set; }
 
         /// <summary>
-        /// This method inserts an integer into the Linked List
+        /// Is a reference to allow transversing the Linked List
         /// </summary>
-        /// <param name="data">integer to be inserted</param>
-        /// <returns>integer inserted</returns>
-        public int Insert(int data)
+        public Node Current { get; set; }
+        #endregion
+
+        #region Single Linked List
+        /// <summary>
+        /// Required at the creation of a Linked List.  Adds a node assigned to Head.
+        /// </summary>
+        /// <param name="node">This node will become the head</param>
+        public SLinkedList(Node node)
         {
-            Node insertNewItem = new Node();
-
-            insertNewItem.Data = data;
-            insertNewItem.Next = head;
-
-            head = insertNewItem;
-
-            return data;
+            Head = node;
+            Current = node;
         }
+        #endregion
+
+        #region Insert a Node at Begining (new Head)
+        /// <summary>
+        /// This method inserts a node into the Linked List
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public void Insert(Node node)
+        {
+            Current = Head;
+            node.Next = Head;
+            Head = node;
+            Current = Head;
+        }
+        #endregion
+
+        #region List the Data in Linked List
+        /// <summary>
+        /// This method prints out a list of integers that are in the Linked List
+        /// </summary>
+        public void Print()
+        {
+            Current = Head;
+
+            while (Current.Next != null)
+            {
+                Console.Write($"{Current.Data} =>");
+                Current = Current.Next;
+            }
+            Console.Write($"{Current.Data} => Null");
+        }
+        #endregion
+
+        #region Insert a Node at the End
+        /// <summary>
+        /// Appends a new node to the end of the Linked List
+        /// </summary>
+        /// <param name="newNode">the node to be added</param>
+        public void Append(Node newNode)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Current.Next = newNode;
+            Current = Head;
+        }
+        #endregion
+
+        #region Insert before Target Node
+        /// <summary>
+        /// Inserts a new node int thte list before a given node
+        /// </summary>
+        /// <param name="newNode">The node to be added</param>
+        /// <param name="targetNode">The node that will follow the newly added node</param>
+        public void InsertBefore(Node newNode, Node targetNode)
+        {
+            Current = Head;
+            if (Head.Data == targetNode.Data)
+            {
+                Insert(newNode);
+                return;
+            }
+
+            while (Current.Next != null)
+            {
+                if (Current.Next.Data == targetNode.Data)
+                {
+                    newNode.Next = targetNode;
+                    Current.Next = newNode;
+                    return;
+                }
+                Current = Current.Next;
+            }
+        }
+        #endregion
+
+        #region Insert after Target Node
+        /// <summary>
+        /// Inserts a new node into the list after a given node
+        /// </summary>
+        /// <param name="newNode">The node to be added</param>
+        /// <param name="targetNode">The node before the newly added node</param>
+        public void InsertAfter(Node newNode, Node targetNode)
+        {
+            while (Current.Next != null)
+            {
+                if (Current.Data == targetNode.Data)
+                {
+                    newNode.Next = targetNode;
+                    Current.Next = newNode;
+                    return;
+                }
+                Current = Current.Next;
+            }
+        }
+        #endregion
+
+        #region Checks Linked List for Data
         /// <summary>
         /// This method checks to see if a praticular integer is in the Linked list
         /// </summary>
@@ -31,27 +137,15 @@ namespace LinkedList.Classes
         /// <returns>Returns true if it is in the linked list; returns false if it isn't</returns>
         public bool Includes(int data)
         {
-            Node address = head;
-            while (address != null)
+            while (Current.Next != null)
             {
-                if (data == address.Data)
+                if (data == Current.Data)
                 {
                     return true;
                 }  
             }
             return false;
         }
-        /// <summary>
-        /// This method prints out a list of integers that are in the Linked List
-        /// </summary>
-        public void Print()
-        {
-            Node address = head;
-            while (address != null)
-            {
-                Console.WriteLine(address.Data);
-                address = address.Next;
-            }
-        }
+        #endregion
     }
 }
