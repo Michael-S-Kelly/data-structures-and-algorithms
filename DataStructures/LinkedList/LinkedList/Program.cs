@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LinkedList.Classes;
 
 namespace LinkedList
 {
@@ -7,11 +8,19 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
+            instantiateList();
         }
 
         static void instantiateList()
         {
-            LinkedList<int> numbers = new LinkedList<int>();
+            Node node1 = new Node(7);
+            Node node2 = new Node(9);
+
+            SLinkedList numList = new SLinkedList(node1);
+            numList.Append(node2);
+
+            numList.Print();
+
         }
     }
 }

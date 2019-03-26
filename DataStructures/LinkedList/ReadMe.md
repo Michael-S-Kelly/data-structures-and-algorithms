@@ -57,7 +57,7 @@ Then select and open ```LinkedList.sln```
 ------------------------------
 
 ## Change Log
-
+1.1 Updated code to align with Amanda's Code
 
 
 
