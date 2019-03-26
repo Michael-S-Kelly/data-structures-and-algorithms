@@ -9,7 +9,7 @@
 ------------------------------
 
 ## Description
-This C# program is [continue description here]
+This C# program is runs through the data-structures of Linked Lists
 
 ------------------------------
 
@@ -35,24 +35,9 @@ Then select and open ```LinkedList.sln```
 ## Visuals
 
 
-##### Application Start
-![Image 1](WordGuessingGame/Assets/MainNav.PNG)
-##### Start of Game
-![Image 2](WordGuessingGame/Assets/BeginGame.PNG)
-##### Playing Game
-![Image 3](WordGuessingGame/Assets/PlayGame.PNG)
-##### Win the Game
-![Image 4](WordGuessingGame/Assets/WinGame.PNG)
-##### End of Game
-![Image 5](WordGuessingGame/Assets/EndGame.PNG)
-##### Options Navigation
-![Image 6](WordGuessingGame/Assets/AdminNav.PNG)
-##### Display Words
-![Image 7](WordGuessingGame/Assets/DisplayWords.PNG)
-##### Add Word
-![Image 8](WordGuessingGame/Assets/AddWord.PNG)
-##### Delete Word
-![Image 9](WordGuessingGame/Assets/DeleteWord.PNG)
+##### Challenge 06 Whiteboard
+![Image 1](Assets/Chal06Whiteboard.jpg)
+
 
 ------------------------------
 
