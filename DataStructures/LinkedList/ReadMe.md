@@ -54,13 +54,16 @@ Then select and open ```LinkedList.sln```
 ### Collaborators
 
 ### Contributors
-####Phil Werner
+#### Phil Werner
+
+#### Jason Few
 
 
 ### Other Resources
 #### Microsoft Visual C# Step by Step Ninth Edition
 #### C# 7.0 in a Nutshell
 #### C# Pocket Reference
+#### C# and .NET Core Test-Driven Development
 #### https://stackoverflow.com/questions/3823848/creating-a-very-simple-linked-list
 #### https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/xwth0h0d(v=vs.90) 
 
