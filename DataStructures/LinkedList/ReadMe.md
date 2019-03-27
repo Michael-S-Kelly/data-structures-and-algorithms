@@ -52,11 +52,12 @@ Then select and open ```LinkedList.sln```
 ## Collaborators, Contributors, and Other Resources used
 
 ### Collaborators
-
-### Contributors
 #### Phil Werner
 
 #### Jason Few
+
+### Contributors
+
 
 
 ### Other Resources
