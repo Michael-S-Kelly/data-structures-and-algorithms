@@ -29,22 +29,6 @@ namespace LinkedList.Classes
             Current = node;
         }
         #endregion
-        
-        #region Insert a Node at Begining (new Head)
-        /// <summary>
-        /// This method inserts a node into the Linked List
-        /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
-        public void Insert(Node node)
-        {
-            //Node node = new Node(data);
-            Current = Head;
-            node.Next = Head;
-            Head = node;
-            Current = Head;
-        }
-        #endregion
 
         #region List the Data in Linked List
         /// <summary>
@@ -60,6 +44,114 @@ namespace LinkedList.Classes
                 Current = Current.Next;
             }
             Console.Write($"{Current.Data} => Null");
+        }
+        #endregion
+
+        #region Checks Linked List for Data
+        /// <summary>
+        /// This method checks to see if a praticular integer is in the Linked list
+        /// </summary>
+        /// <param name="data">Takes in an integer to see if it is in the Linked List</param>
+        /// <returns>Returns true if it is in the linked list; returns false if it isn't</returns>
+        public bool Includes(int data)
+        {
+            Current = Head;
+
+            if (Current.Data == data)
+            {
+                return true;
+            }
+
+            while (Current.Next != null)
+            {
+                if (Current.Data == data)
+                {
+                    return true;
+                }
+
+                Current = Current.Next;
+            }
+
+            if (Current.Data == data)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        #endregion
+
+        #region Find a value at a praticular index number
+        /// <summary>
+        /// Converts Linked List into an Array
+        /// </summary>
+        /// <returns>Array with data from Linked List</returns>
+        public int[] LLToArray()
+        {
+            int indexLength = LLLength();
+            int[] lLArray = new int[indexLength];
+            int i = 0;
+            Current = Head;
+
+            while (Current.Next != null)
+            {
+                lLArray[i] = Current.Data;
+                Current = Current.Next;
+                i++;
+            }
+            lLArray[i] = Current.Data;
+            return lLArray;
+        }
+
+        /// <summary>
+        /// Determins the length of the Linked List in order to create the array in the LLToArray method
+        /// </summary>
+        /// <returns>length of the Linked List</returns>
+        public int LLLength()
+        {
+            Current = Head;
+            int indexLength = 0;
+
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+                indexLength++;
+            }
+            indexLength++;
+            return indexLength;
+
+        }
+
+        /// <summary>
+        /// Given an index number
+        /// </summary>
+        /// <param name="indexNum"></param>
+        /// <returns></returns>
+        public int ValueAtIndex(int indexNum)
+        {
+            int[] lLArray = LLToArray();
+            if (indexNum < lLArray.Length)
+            {
+                int indexValue = lLArray[lLArray.Length - indexNum];
+                return indexValue;
+            }
+            return -1;
+        }
+        #endregion
+
+        #region Insert a Node at Begining (new Head)
+        /// <summary>
+        /// This method inserts a node into the Linked List
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public void Insert(Node node)
+        {
+            //Node node = new Node(data);
+            Current = Head;
+            node.Next = Head;
+            Head = node;
+            Current = Head;
         }
         #endregion
 
@@ -130,32 +222,6 @@ namespace LinkedList.Classes
         }
         #endregion
 
-        #region Checks Linked List for Data
-        /// <summary>
-        /// This method checks to see if a praticular integer is in the Linked list
-        /// </summary>
-        /// <param name="data">Takes in an integer to see if it is in the Linked List</param>
-        /// <returns>Returns true if it is in the linked list; returns false if it isn't</returns>
-        public bool Includes(int data)
-        {
-            Current = Head;
 
-            if (Current.Data == data)
-            {
-                return true;
-            }
-
-            while (Current.Next != null)
-            {
-                if (Current.Data == data)
-                {
-                    return true;
-                }
-
-                Current = Current.Next;
-            }
-            return false;
-        }
-        #endregion
     }
 }

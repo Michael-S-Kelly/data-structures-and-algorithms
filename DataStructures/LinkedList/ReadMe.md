@@ -37,6 +37,8 @@ Then select and open ```LinkedList.sln```
 
 ##### Challenge 06 Whiteboard
 ![Image 1](Assets/Chal06Whiteboard.jpg)
+##### Challenge 07 Whiteboard
+![Image 2](Assets/chall07Whiteboard.jpg)
 
 
 ------------------------------
