@@ -21,6 +21,8 @@ namespace LinkedList
 
             numList.Print();
 
+            
+
         }
     }
 }
