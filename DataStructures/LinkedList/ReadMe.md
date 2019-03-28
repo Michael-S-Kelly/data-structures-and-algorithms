@@ -3,13 +3,13 @@
 ------------------------------
 
 # Data-Structures
-#### Lab 05: Linked Lists
+#### Lab 05 - 08: Linked Lists
 ##### *Author: Mike Kelly*
 
 ------------------------------
 
 ## Description
-This C# program is runs through the data-structures of Linked Lists
+This C# program is runs through the data-structures of Linked Lists.  This includes establishing a linked list, inserting a node at the head, inserting a node at the end, inserting a node before a specific node, inserting a node after a specific node, and merging 2 nodes.
 
 ------------------------------
 
@@ -39,7 +39,8 @@ Then select and open ```LinkedList.sln```
 ![Image 1](Assets/Chal06Whiteboard.jpg)
 ##### Challenge 07 Whiteboard
 ![Image 2](Assets/chall07Whiteboard.jpg)
-
+##### Challenge 08 Whiteboard
+![Image 2](Assets/chall08Whiteboard.jpg)
 
 ------------------------------
 
