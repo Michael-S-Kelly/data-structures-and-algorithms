@@ -1,9 +1,9 @@
-# Code: Implement a Link List
+# Code: Merge a Link List
 
 ------------------------------
 
 # Data-Structures
-#### Lab 05 - 07: Linked Lists
+#### Lab 08: Merge Linked Lists
 ##### *Author: Mike Kelly*
 
 ------------------------------
@@ -25,27 +25,24 @@ Next navigate to the location you cloned the Repository.
 
 Double click on the ```DataStructures``` directory.
 
-Double click on the ```LinkedList``` directory.
+Double click on the ```LLMerge``` directory.
 
 
-Then select and open ```LinkedList.sln```
+Then select and open ```LLMerge.sln```
 
 ------------------------------
 
 ## Visuals
 
 
-##### Challenge 06 Whiteboard
-![Image 1](Assets/Chal06Whiteboard.jpg)
-##### Challenge 07 Whiteboard
-![Image 2](Assets/chall07Whiteboard.jpg)
+
 ##### Challenge 08 Whiteboard
 ![Image 2](Assets/chall08Whiteboard.jpg)
 
 ------------------------------
 
 ## Change Log
-1.1 Updated code to align with Amanda's Code
+
 
 
 
@@ -66,8 +63,5 @@ Then select and open ```LinkedList.sln```
 #### C# 7.0 in a Nutshell
 #### C# Pocket Reference
 #### C# and .NET Core Test-Driven Development
-#### https://stackoverflow.com/questions/3823848/creating-a-very-simple-linked-list
-#### https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/xwth0h0d(v=vs.90) 
-
 ------------------------------
 For more information on Markdown: https://www.markdownguide.org/cheat-sheet
