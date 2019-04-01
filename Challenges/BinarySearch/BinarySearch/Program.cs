@@ -14,7 +14,12 @@ namespace BinarySearch
             Console.WriteLine(result);
             Console.ReadLine();
         }
-
+        /// <summary>
+        /// Runs a binary search through an Array
+        /// </summary>
+        /// <param name="searchArray">Target Array to search through</param>
+        /// <param name="searchNum">Target value to find in the Array</param>
+        /// <returns>Index number</returns>
         public static int SearchArray(int[] searchArray, int searchNum)
         {
             int start = 0;
