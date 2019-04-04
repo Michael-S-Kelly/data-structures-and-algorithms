@@ -22,7 +22,7 @@ A C# implementation of a `Multi-Bracket Validation`. Given a string it checks to
 ------------------------------
 
 ## Visuals
-
+![Image 1](Assets/Chall13Whiteboard.jpg)
 ##### BracketValidation
 *The BracketValidation Method takes in a string and turns it into an array of characters.*
 *It then checks to see if the first character is an closed bracket, if it is, it returns false.* 
