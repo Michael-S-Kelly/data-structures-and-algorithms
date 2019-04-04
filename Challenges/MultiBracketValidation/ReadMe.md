@@ -29,7 +29,7 @@ A C# implementation of a `Multi-Bracket Validation`. Given a string it checks to
 *Otherwise, it runs the rest of the characters in a loop to see if each bracket that opens, closes properly.*
 *If it does return properly, it returns true.  If it doesn't, it returns false.*
 ![Image 1](Assets/BracketNotValid.PNG)
-
+![Image 1](Assets/BracketIsValid.PNG)
 
 ------------------------------
 

@@ -33,53 +33,34 @@ namespace MultiBracketValidation
         /// <returns>true if every open bracket is closed; false if it doesn't</returns>
         public static bool BracketValidation (string input)
         {
-            char[] bracketTest = input.ToCharArray();
             Classes.Stack testStack = new Classes.Stack();
-            testStack.Push('0');
-            if (bracketTest[0] == ')' ||bracketTest[0] == '}' ||bracketTest[0] == ']')
-            {
-                return false;
-            }
-            int j = 0;
-            for (int i = 0; i < bracketTest.Length; i++)
-            {
-                if (bracketTest[i] == '(' ||bracketTest[i] == '{' || bracketTest[i] == '[')
-                {
-                    testStack.Push(bracketTest[i]);
-                    if (i + 1 > bracketTest.Length)
-                    {
-                        return false;
-                    }
-                    j = i + 1;
-                }
-            }
 
-            var look = testStack.Peek();
-
-            for (int i = j; i < bracketTest.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (bracketTest[i] == '(' || bracketTest[i] == ')' || bracketTest[i] == '{' || bracketTest[i] == '}' || bracketTest[i] == '[' || bracketTest[i] == ']')
+                
+                if (input[i] == '(' || input[i] == '{' || input[i] == '[')
                 {
-                    look = testStack.Peek();
-                    if (look.Equals('(') && bracketTest[i] == ')' || look.Equals('{') && bracketTest[i] == '}' || look.Equals('[') && bracketTest[i] == ']')
-                    {
-                        testStack.Pop();
-                    }
-                    else
-                    {
-                        testStack.Push(bracketTest[i]);
-                    }
+                    testStack.Push(input[i]);
                 }
+                if (testStack.Top != null && testStack.Top.Value == '(' && input[i] == ')')
+                {
+                    testStack.Pop();
+                }
+                if (testStack.Top != null && testStack.Top.Value == '{' && input[i] == '}')
+                {
+                    testStack.Pop();
+                }
+                if (testStack.Top != null && testStack.Top.Value == '[' && input[i] == ']')
+                {
+                    testStack.Pop();
+                }
+              
             }
-            if (testStack.Peek().Equals('0'))
+            if (testStack.Top == null)
             {
                 return true;
             }
             return false;
         }
     }
-
-    
-
-    
 }
