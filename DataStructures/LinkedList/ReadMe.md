@@ -1,73 +1,42 @@
-# Code: Implement a Link List
-
+# Code: Implement a Link Lis***
 ------------------------------
 
-# Data-Structures
-#### Lab 05 - 07: Linked Lists
-##### *Author: Mike Kelly*
+# Lab 05: Linked Lists
+#### *Author: Mike Kelly*
 
 ------------------------------
 
 ## Description
-This C# program is runs through the data-structures of Linked Lists.  This includes establishing a linked list, inserting a node at the head, inserting a node at the end, inserting a node before a specific node, inserting a node after a specific node, and merging 2 nodes.
+
+This C# implementation runs through the data-structures of Linked Lists.  This includes establishing a linked list, inserting a node at the head, inserting a node at the end, inserting a node before a specific node, inserting a node after a specific node, and merging 2 nodes.
 
 ------------------------------
 
-## Getting Started
-Clone this repository to your local machine.
-```
-$ git clone [https://github.com/Michael-S-Kelly/data-structures-and-algorithms.git]
-```
-#### To run the program from Visual Studio:
-Select ```File``` -> ```Open``` -> ```Project/Solution```
+## Methods
 
-Next navigate to the location you cloned the Repository.
-
-Double click on the ```DataStructures``` directory.
-
-Double click on the ```LinkedList``` directory.
-
-
-Then select and open ```LinkedList.sln```
+| Method | Summary | Big O Time | Big O Space | Example | 
+| :----------- | :----------- | :-------------: | :-------------: | :----------- |
+| instantiateList | This method creates a new Linked list with 2 nodes. | O(1) | O(1) | N/A |
+| Node | This method creates a new node with inputted data| O(1) | O(1) | Data = 5 |
+| SLinkedList | Required at the creation of a Linked List.  Adds a node assigned to Head.| O(1) | O(1) | Data = 5 |
+| Print | This method prints out a list of integers that are in the Linked List| O(n) | O(1) | 5,4,3,2,1 |
+| Includes | This method checks to see if a praticular integer is in the Linked list| O(n) | O(1) | 3 |
+| Insert | This method inserts a node into the Linked List| O(1) | O(1) | 3 |
+| Insert | This method inserts a node into the Linked List| O(1) | O(1) | 3 |
 
 ------------------------------
 
 ## Visuals
-
-
-##### Challenge 06 Whiteboard
 ![Image 1](Assets/Chal06Whiteboard.jpg)
-##### Challenge 07 Whiteboard
-![Image 2](Assets/chall07Whiteboard.jpg)
-##### Challenge 08 Whiteboard
-![Image 2](Assets/chall08Whiteboard.jpg)
+##### BracketValidation
+* Instantiates a Linked List, creates a node, checks to see if a praticular node value is in the linked list, inserts a value in a new node at the head of the linked list, and prints a list of the values in the linked list.
+![Image 1](Assets/PrintMethod.PNG)
 
 ------------------------------
 
 ## Change Log
-1.1 Updated code to align with Amanda's Code
-
-
+1.1 Updated the ReadMe file
 
 ------------------------------
-## Collaborators, Contributors, and Other Resources used
 
-### Collaborators
-#### Phil Werner
-
-#### Jason Few
-
-### Contributors
-
-
-
-### Other Resources
-#### Microsoft Visual C# Step by Step Ninth Edition
-#### C# 7.0 in a Nutshell
-#### C# Pocket Reference
-#### C# and .NET Core Test-Driven Development
-#### https://stackoverflow.com/questions/3823848/creating-a-very-simple-linked-list
-#### https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/xwth0h0d(v=vs.90) 
-
-------------------------------
 For more information on Markdown: https://www.markdownguide.org/cheat-sheet

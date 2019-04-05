@@ -11,6 +11,9 @@ namespace LinkedList
             instantiateList();
         }
 
+        /// <summary>
+        /// This method creates a new Linked list with 2 nodes.
+        /// </summary>
         static void instantiateList()
         {
             Node node1 = new Node(7);
