@@ -22,7 +22,10 @@ This C# implementation runs through the data-structures of Linked Lists.  This i
 | Print | This method prints out a list of integers that are in the Linked List| O(n) | O(1) | 5,4,3,2,1 |
 | Includes | This method checks to see if a praticular integer is in the Linked list| O(n) | O(1) | 3 |
 | Insert | This method inserts a node into the Linked List| O(1) | O(1) | 3 |
-| Insert | This method inserts a node into the Linked List| O(1) | O(1) | 3 |
+| Append | Appends a new node to the end of the Linked List | O(n) | O(1) | 3 |
+| InsertBefore | Inserts a new node int thte list before a given node | O(n) | O(1) | 3 |
+| InsertAfter | Inserts a new node into the list after a given node | O(n) | O(1) | 3 |
+
 
 ------------------------------
 

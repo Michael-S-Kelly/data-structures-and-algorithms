@@ -108,6 +108,25 @@ namespace LinkedList_TDD
             Assert.Equal(7, check);
         }
 
+        //[Fact]
+        public void ValueAtIndexThreeIsThree()
+        {
+            //Arrange
+            Node node2 = new Node(2);
+            Node node1 = new Node(7);
+            Node node5 = new Node(3);
+            Node node4 = new Node(9);
+            Node node3 = new Node(4);
 
+            SLinkedList list = new SLinkedList(node1);
+            list.Insert(node2);
+            list.Append(node3);
+            list.InsertBefore(node4, node1);
+            list.InsertAfter(node5, node1);
+            //Act
+            int check = list.ValueAtIndex(4);
+            //Assert
+            Assert.Equal(3, check);
+        }
     }
 }

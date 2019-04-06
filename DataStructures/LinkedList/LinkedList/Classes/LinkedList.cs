@@ -296,7 +296,7 @@ namespace LinkedList.Classes
                 if (Current.Data == targetNode.Data)
                 {
                     newNode.Next = targetNode;
-                    Current.Next = newNode;
+                    Current = newNode;
                     return;
                 }
                 Current = Current.Next;
