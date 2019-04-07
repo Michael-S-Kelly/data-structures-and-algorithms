@@ -25,6 +25,7 @@ This C# implementation runs through the data-structures of Linked Lists.  This i
 | Append | Appends a new node to the end of the Linked List | O(n) | O(1) | 3 |
 | InsertBefore | Inserts a new node int thte list before a given node | O(n) | O(1) | 3 |
 | InsertAfter | Inserts a new node into the list after a given node | O(n) | O(1) | 3 |
+| ValueAtIndex | Given an index number, returns the value at the Node at that index number | O(n) | O(1) | 3 |
 
 
 ------------------------------
