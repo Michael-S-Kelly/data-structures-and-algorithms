@@ -1,4 +1,4 @@
-# Code: Implement a Link Lis***
+# Code: *** Implement a Linked List ***
 ------------------------------
 
 # Lab 05: Linked Lists
@@ -40,6 +40,7 @@ This C# implementation runs through the data-structures of Linked Lists.  This i
 
 ## Change Log
 1.1 Updated the ReadMe file
+1.2 Fixed a few methods, added some more tests, updated ReadMe file
 
 ------------------------------
 
