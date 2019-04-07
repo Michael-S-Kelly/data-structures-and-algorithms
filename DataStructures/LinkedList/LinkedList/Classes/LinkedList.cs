@@ -6,7 +6,6 @@ namespace LinkedList.Classes
 {
     public class SLinkedList
     {
-        #region Getters and Setters
         /// <summary>
         /// Assigns Head to the first node
         /// </summary>
@@ -16,9 +15,7 @@ namespace LinkedList.Classes
         /// Is a reference to allow transversing the Linked List
         /// </summary>
         public Node Current { get; set; }
-        #endregion
         
-        #region Single Linked List
         /// <summary>
         /// Required at the creation of a Linked List.  Adds a node assigned to Head.
         /// </summary>
@@ -28,9 +25,7 @@ namespace LinkedList.Classes
             Head = node;
             Current = node;
         }
-        #endregion
-
-        #region List the Data in Linked List
+        
         /// <summary>
         /// This method prints out a list of integers that are in the Linked List
         /// </summary>
@@ -45,9 +40,7 @@ namespace LinkedList.Classes
             }
             Console.Write($"{Current.Data} => Null");
         }
-        #endregion
-
-        #region Checks Linked List for Data
+        
         /// <summary>
         /// This method checks to see if a praticular integer is in the Linked list
         /// </summary>
@@ -79,9 +72,7 @@ namespace LinkedList.Classes
 
             return false;
         }
-        #endregion
-
-        #region Find a value at a praticular index number
+        /*
         /// <summary>
         /// Converts Linked List into an Array
         /// </summary>
@@ -102,7 +93,7 @@ namespace LinkedList.Classes
             lLArray[i] = Current.Data;
             return lLArray;
         }
-
+        */
         /// <summary>
         /// Determins the length of the Linked List in order to create the array in the LLToArray method
         /// </summary>
@@ -123,23 +114,37 @@ namespace LinkedList.Classes
         }
 
         /// <summary>
-        /// Given an index number
+        /// Given an index number, returns the value at the Node at that index number
         /// </summary>
-        /// <param name="indexNum"></param>
-        /// <returns></returns>
-        public int ValueAtIndex(int indexNum)
+        /// <param name="k">Target index number to get a value from</param>
+        /// <returns>Get a value at a praticular index</returns>
+        public int ValueAtIndex(int k)
         {
-            int[] lLArray = LLToArray();
-            if (indexNum < lLArray.Length)
-            {
-                int indexValue = lLArray[lLArray.Length - indexNum];
-                return indexValue;
-            }
-            return -1;
-        }
-        #endregion
+            int count = LLLength();
+            Current = Head;
 
-        #region Merge Two Linked Lists
+            if (k > count || k < 0)
+            {
+                Console.WriteLine("Sorry, The value that you specified is outside the limits");
+                return -1;
+            }
+
+            while (Current.Next != null && k > 0)
+            {
+                Current = Current.Next;
+                k--;
+            }
+            var current2 = Head;
+            while (Current.Next != null)
+            {
+                
+                Current = Current.Next;
+                current2 = current2.Next;
+            }
+            return current2.Data;
+        }
+        
+        /*
         public int[] MergeTwoLL(SLinkedList list1, SLinkedList list2)
         {
             int length1 = list1.LLLength();
@@ -202,6 +207,7 @@ namespace LinkedList.Classes
             }
             
         }
+
         public int[] ReturnLinkedListArray(SLinkedList list)
         {
             int indexLength = LLLength();
@@ -218,31 +224,24 @@ namespace LinkedList.Classes
             lLArray[i] = Current.Data;
             return lLArray;
         }
+        */
 
-        #endregion
-
-        #region Insert a Node at Begining (new Head)
         /// <summary>
         /// This method inserts a node into the Linked List
         /// </summary>
         /// <param name="node"></param>
-        /// <returns></returns>
-        public void Insert(Node node)
+        public void Insert(int data)
         {
-            //Node node = new Node(data);
-            Current = Head;
+            Node node = new Node(data);
             node.Next = Head;
             Head = node;
-            Current = Head;
         }
-        #endregion
-
-        #region Insert a Node at the End
+        
         /// <summary>
         /// Appends a new node to the end of the Linked List
         /// </summary>
         /// <param name="newNode">the node to be added</param>
-        public void Append(Node node)
+        public void Append(int data)
         {
             Current = Head;
 
@@ -250,12 +249,10 @@ namespace LinkedList.Classes
             {
                 Current = Current.Next;
             }
-
+            Node node = new Node(data);
             Current.Next = node;
         }
-        #endregion
-
-        #region Insert before Target Node
+        
         /// <summary>
         /// Inserts a new node int thte list before a given node
         /// </summary>
@@ -266,7 +263,8 @@ namespace LinkedList.Classes
             Current = Head;
             if (Head.Data == targetNode.Data)
             {
-                Insert(newNode);
+
+                Insert(newNode.Data);
                 return;
             }
 
@@ -274,16 +272,14 @@ namespace LinkedList.Classes
             {
                 if (Current.Next.Data == targetNode.Data)
                 {
-                    newNode.Next = targetNode;
+                    newNode.Next = Current.Next;
                     Current.Next = newNode;
                     return;
                 }
                 Current = Current.Next;
             }
         }
-        #endregion
-
-        #region Insert after Target Node
+        
         /// <summary>
         /// Inserts a new node into the list after a given node
         /// </summary>
@@ -291,19 +287,19 @@ namespace LinkedList.Classes
         /// <param name="targetNode">The node before the newly added node</param>
         public void InsertAfter(Node newNode, Node targetNode)
         {
+            Current = Head;
             while (Current.Next != null)
             {
                 if (Current.Data == targetNode.Data)
                 {
-                    newNode.Next = targetNode;
-                    Current = newNode;
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
                     return;
                 }
                 Current = Current.Next;
             }
+
         }
-        #endregion
-
-
+        
     }
 }

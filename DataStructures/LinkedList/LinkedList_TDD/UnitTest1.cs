@@ -28,7 +28,7 @@ namespace LinkedList_TDD
             Node node1 = new Node(7);
             Node node2 = new Node(2);
             SLinkedList list = new SLinkedList(node1);
-            list.Insert(node2);
+            list.Insert(node2.Data);
             //Act
             bool check = list.Includes(2);
             //Assert
@@ -43,8 +43,8 @@ namespace LinkedList_TDD
             Node node2 = new Node(2);
             Node node3 = new Node(4);
             SLinkedList list = new SLinkedList(node1);
-            list.Insert(node2);
-            list.Append(node3);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
             //Act
             bool check = list.Includes(4);
             //Assert
@@ -60,8 +60,8 @@ namespace LinkedList_TDD
             Node node3 = new Node(4);
             Node node4 = new Node(3);
             SLinkedList list = new SLinkedList(node1);
-            list.Insert(node2);
-            list.Append(node3);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
             list.InsertBefore(node4, node1);
             //Act
             bool check = list.Includes(3);
@@ -78,8 +78,8 @@ namespace LinkedList_TDD
             Node node3 = new Node(4);
             Node node4 = new Node(9);
             SLinkedList list = new SLinkedList(node1);
-            list.Insert(node2);
-            list.Append(node3);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
             list.InsertBefore(node4, node1);
             //Act
             bool check = list.Includes(9);
@@ -88,45 +88,143 @@ namespace LinkedList_TDD
         }
 
         [Fact]
-        public void ValueAtIndexTwoIsSeven()
+        public void ValueAtIndexTwoIsFour()
         {
             //Arrange
-            Node node2 = new Node(2);
-            Node node5 = new Node(3);
             Node node1 = new Node(7);
-            Node node4 = new Node(9);
+            Node node2 = new Node(2);
             Node node3 = new Node(4);
-
-            SLinkedList list = new SLinkedList(node1);
-            list.Insert(node2);
-            list.Append(node3);
-            list.InsertBefore(node4, node1);
-            list.InsertBefore(node5, node1);
+            Node node4 = new Node(9);
+            Node node5 = new Node(3);
+            
+            SLinkedList list7 = new SLinkedList(node1);
+            list7.Insert(node2.Data);
+            list7.Insert(node3.Data);
+            list7.Insert(node4.Data);
+            list7.Insert(node5.Data);
             //Act
-            int check = list.ValueAtIndex(2);
+            int check = list7.ValueAtIndex(2);
             //Assert
-            Assert.Equal(7, check);
+            Assert.Equal(4, check);
         }
 
-        //[Fact]
-        public void ValueAtIndexThreeIsThree()
+        [Fact]
+        public void InsertNode4BeforeNode1()
         {
             //Arrange
-            Node node2 = new Node(2);
-            Node node1 = new Node(7);
-            Node node5 = new Node(3);
-            Node node4 = new Node(9);
             Node node3 = new Node(4);
+            Node node5 = new Node(3);
+            Node node1 = new Node(7);
+            Node node4 = new Node(9);
+            Node node2 = new Node(2);
 
             SLinkedList list = new SLinkedList(node1);
-            list.Insert(node2);
-            list.Append(node3);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
+            list.InsertBefore(node4, node1);
+            list.InsertAfter(node5, node1);
+            //Act
+            int check = list.ValueAtIndex(3);
+            //Assert
+            Assert.Equal(9, check);
+        }
+
+        [Fact]
+        public void InsertNode5AfterNode1()
+        {
+            //Arrange
+            Node node3 = new Node(4);
+            Node node5 = new Node(3);
+            Node node1 = new Node(7);
+            Node node4 = new Node(9);
+            Node node2 = new Node(2);
+
+            SLinkedList list = new SLinkedList(node1);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
+            list.InsertBefore(node4, node1);
+            list.InsertAfter(node5, node1);
+            //Act
+            int check = list.ValueAtIndex(1);
+            //Assert
+            Assert.Equal(3, check);
+        }
+
+        [Fact]
+        public void RequestedIndexOutsideLimit()
+        {
+            //Arrange
+            Node node3 = new Node(4);
+            Node node5 = new Node(3);
+            Node node1 = new Node(7);
+            Node node4 = new Node(9);
+            Node node2 = new Node(2);
+
+            SLinkedList list = new SLinkedList(node1);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
+            list.InsertBefore(node4, node1);
+            list.InsertAfter(node5, node1);
+            //Act
+            int check = list.ValueAtIndex(6);
+            //Assert
+            Assert.Equal(-1, check);
+        }
+
+        [Fact]
+        public void IndexEqualToK()
+        {
+            //Arrange
+            Node node3 = new Node(4);
+            Node node5 = new Node(3);
+            Node node1 = new Node(7);
+            Node node4 = new Node(9);
+            Node node2 = new Node(2);
+
+            SLinkedList list = new SLinkedList(node1);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
             list.InsertBefore(node4, node1);
             list.InsertAfter(node5, node1);
             //Act
             int check = list.ValueAtIndex(4);
             //Assert
-            Assert.Equal(3, check);
+            Assert.Equal(2, check);
+        }
+
+        [Fact]
+        public void WhereKIsNegative()
+        {
+            //Arrange
+            Node node3 = new Node(4);
+            Node node5 = new Node(3);
+            Node node1 = new Node(7);
+            Node node4 = new Node(9);
+            Node node2 = new Node(2);
+
+            SLinkedList list = new SLinkedList(node1);
+            list.Insert(node2.Data);
+            list.Append(node3.Data);
+            list.InsertBefore(node4, node1);
+            list.InsertAfter(node5, node1);
+            //Act
+            int check = list.ValueAtIndex(-1);
+            //Assert
+            Assert.Equal(-1, check);
+        }
+
+        [Fact]
+        public void WhereLLIsSizeOf1()
+        {
+            //Arrange
+            Node node1 = new Node(7);
+
+            SLinkedList list = new SLinkedList(node1);
+
+            //Act
+            int check = list.ValueAtIndex(0);
+            //Assert
+            Assert.Equal(7, check);
         }
     }
 }

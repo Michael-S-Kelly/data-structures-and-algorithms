@@ -20,7 +20,7 @@ namespace LinkedList
             Node node2 = new Node(9);
 
             SLinkedList numList = new SLinkedList(node1);
-            numList.Append(node2);
+            numList.Append(node2.Data);
 
             numList.Print();
 
