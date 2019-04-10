@@ -1,7 +1,7 @@
-# Lab 15: Trees
+# Lab 15 & 17: Trees
 ------------------------------
 
-# Lab 13: Implement a
+# Transversal Patterns
 #### *Author: Mike Kelly*
 
 ------------------------------
@@ -19,12 +19,13 @@ This C# implementation creates a binary search tree and uses each of the three m
 | BinaryTree | Creates a new Binary Search Tree with new Node Root instatiation. | O(1) | O(1) | N/A |
 | Add | Adds a new node to an existing Binary Search Tree. | O(logN) | O(1) | 2 |
 | Contains | Transverses through a Binary Search Tree to see if it contains a praticular value. | O(logN) | O(1) | 2 |
-
+| BreadthFirst | Create an array that shows the value order of a breadth-first search of the binary tree. | O(n) | O(n) | {1, 4, 5 } |
 
 ------------------------------
 
 ## Visuals
-
+##### Whiteboard
+![Image 1](Assets/Chall17Whiteboard.jpg)
 ------------------------------
 
 ## Change Log
