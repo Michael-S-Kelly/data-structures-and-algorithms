@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using Tree.Classes;
 
@@ -127,6 +128,30 @@ namespace Tree.Classes
             return false;
         }
 
-        
+
+
+        public int[] BreadthFirst(BinaryTree binaryTree)
+        {
+            Current = Root;
+            int[] results = new int[20];
+            Queue queue = new Queue(binaryTree.Current);
+            queue.Enqueue(binaryTree.Current);
+            int i = 0;
+            while (queue.Front != null)
+            {
+                binaryTree.Current = queue.Front;
+                results[i] = queue.Front.Data;
+                if (binaryTree.Current.LChild != null)
+                {
+                    queue.Enqueue(binaryTree.Current.LChild);
+                }
+                if (binaryTree.Current.RChild != null)
+                {
+                    queue.Enqueue(binaryTree.Current.RChild);
+                }
+                i++;
+            }
+            return results;
+        }
     }
 }
