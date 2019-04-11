@@ -73,5 +73,22 @@ namespace Tree_TDD
             //Assert
             Assert.Equal(check, test);
         }
+
+        [Fact]
+        public void CheckforMaxValue()
+        {
+            //Arrange
+            Node node1 = new Node(10);
+            Node node2 = new Node(13);
+            Node node3 = new Node(2);
+            BinaryTree fourTree = new BinaryTree(node1);
+            fourTree.Insert(node2.Data);
+            fourTree.Insert(node3.Data);
+
+            //Act
+            var maxValue = fourTree.FindMaximumValue(fourTree);
+            //Assert
+            Assert.Equal(13, maxValue);
+        }
     }
 }
