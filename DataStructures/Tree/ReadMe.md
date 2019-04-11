@@ -8,7 +8,7 @@
 
 ## Description
 
-This C# implementation creates a binary search tree and uses each of the three methods (preOrder, inOrder, and postOrder) to search the tree.
+This C# implementation transverses a Binary Tree or a Binary Search Tree to get information.
 
 ------------------------------
 
