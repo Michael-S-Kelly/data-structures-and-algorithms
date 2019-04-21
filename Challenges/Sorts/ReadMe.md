@@ -23,7 +23,7 @@ This C# implementation inserts an array for insertion sort that takes in an unso
 
 ## Visuals
 #### Result
-![Image 1](https://github.com/Michael-S-Kelly/data-structures-and-algorithms/blob/master/Challenges/Sorts/ReadMe.md)
+![Image 1](Assets/result.PNG)
 
 
 ------------------------------
