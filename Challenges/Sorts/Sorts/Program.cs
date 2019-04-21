@@ -10,19 +10,21 @@ namespace Sorts
             Console.WriteLine("Hello World!");
 
             int[] unsortedArray = { 10, 5, 8, 3, 6, 2, 9, 7, 4, 1 };
+            Console.WriteLine("Unsorted Array");
+            printArray(unsortedArray);
             int[] sortedArray = InsertionSorts.InsertionSort(unsortedArray);
-            Console.WriteLine("Inserted Array");
-            foreach (int number in unsortedArray)
-            {
-                Console.Write($"{number} ");
-            }
             Console.WriteLine();
             Console.WriteLine("Sorted Array");
-            foreach (int number in sortedArray)
+            printArray(sortedArray);
+            Console.ReadKey();
+        }
+
+        public static void printArray(int[] array)
+        {
+            foreach (int number in array)
             {
                 Console.Write($"{number} ");
             }
-            Console.ReadKey();
         }
     }
 }
