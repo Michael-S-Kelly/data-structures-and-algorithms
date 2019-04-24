@@ -6,6 +6,11 @@ namespace Sorts.Classes
 {
     public class InsertionSorts
     {
+        /// <summary>
+        /// (Sort Array) Takes in an unsorted array, sorts the array, and returns a sorted array
+        /// </summary>
+        /// <param name="numberArray">Unsorted Array</param>
+        /// <returns>Sorted Array</returns>
         public static int[] InsertionSort(int[] numberArray)
         {
             for (int i = 0; i < numberArray.Length - 1; i++)
